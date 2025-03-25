@@ -21,6 +21,7 @@
             width: 80%;
             max-width: 800px;
             text-align: center;
+            font-size: 1.5em;
             background-color: #10162a;
             box-shadow: 0 0 15px #00ffff;
         }
@@ -48,6 +49,20 @@
         .shield-icon {
             width: 100px;
             margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 1.6em;
+        }
+
+        /* 📱 Mobile Optimization */
+        @media (max-width: 500px) {
+            .input-section {
+                flex-direction: column; /* Stacks input and button */
+            }
+
+            input, button {
+                width: 100%; /* Full width on small screens */
+            }
         }
     </style>
 </head>
