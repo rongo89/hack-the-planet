@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Terminal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Share Tech Mono', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 2em;
+            text-shadow: 0 0 5px #00ff00;
+            margin-top: 50px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .terminal-link {
+            display: block;
+            text-decoration: none;
+            color: #00ff00;
+            font-size: 1.5em;
+            margin: 15px;
+            padding: 10px;
+            border: 2px solid #00ff00;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .terminal-link::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background: rgba(0, 255, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        .terminal-link:hover::before {
+            left: 0;
+        }
+
+        .terminal-link:hover {
+            background: rgba(0, 255, 0, 0.1);
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        .glitch {
+            font-size: 1.2em;
+            display: inline-block;
+            animation: glitch 0.5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-2px); }
+            40% { transform: translateX(2px); }
+            60% { transform: translateX(-2px); }
+            80% { transform: translateX(2px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cyber Terminal</h1>
+    <p class="glitch">Access Restricted. Authorized Users Only.</p>
+
+    <div class="container">
+        <a href="terminal_bytestorm.html" class="terminal-link">ByteStorm Terminal</a>
+        <a href="terminal_crypto_cracker.html" class="terminal-link">Crypto Cracker</a>
+        <a href="terminal_darkkey_unit.html" class="terminal-link">DarkKey Unit</a>
+        <a href="terminal_firewall_force.html" class="terminal-link">Firewall Force</a>
+        <a href="final_terminal_mastercode_3246.html" class="terminal-link">Final Test</a>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Zugriffspunkt – DarkKey Unit</title>
+    <style>
+        body {
+            background-color: #000b12;
+            color: #cccccc;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 40px;
+        }
+        .terminal {
+            border: 3px solid #cccccc;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #0e1a24;
+            max-width: 760px;
+            margin: auto;
+            text-align: center;
+        }
+        h1 {
+            color: #cccccc;
+            font-size: 1.6em;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 10px;
+        }
+        .input-section {
+            margin-top: 30px;
+        }
+        input {
+            background-color: #000;
+            color: #cccccc;
+            border: 2px solid #cccccc;
+            padding: 10px;
+            font-size: 1.2em;
+            width: 250px;
+        }
+        button {
+            background-color: #cccccc;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+        .result {
+            margin-top: 30px;
+            color: #00ff88;
+            font-weight: bold;
+            line-height: 1.6em;
+        }
+        .icon {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <img class="icon" src="imgs/team_1.png" alt="Team Icon">
+        <h1>🛡 Zugriffspunkt: PROTOKOLLVERIFIZIERUNG</h1>
+        <p><strong>Einheit:</strong> DarkKey Unit</p>
+        <p>Eine verschlüsselte Datenmatrix wurde abgefangen.<br>
+           Die Entschlüsselung erfordert den autorisierten Zugriffscode deiner Einheit.</p>
+        <div class="input-section">
+            <label for="code">Zugriffscode:</label>
+            <input type="text" id="code" placeholder="Gib den Code ein" />
+            <button onclick="verifyCode()">Autorisieren</button>
+        </div>
+        <div id="result" class="result hidden">
+            ✅ Zugriff autorisiert.<br>
+            🔍 Analyseebene freigegeben.<br><br>
+            🧠 Verstreute Datenfragmente im Raum entdeckt.<br>
+            🔦 UV-Spur aktiv – folgt eurem Einsatzzonensymbol.<br><br>
+            📄 Holt euer Codex-Dokument im Sicherheitsbereich (<span id="secret"></span>) ab.<br>
+            Mission III beginnt jetzt.
+        </div>
+        <div id="result-failed" class="result hidden">
+            ❌ Zugriff verweigert.<br>
+            🚨 Sicherheitsprotokoll aktiviert.<br><br>
+        </div>
+    </div>
+
+    <script src="scripts/decryption.js"></script>
+</body>
+</html>

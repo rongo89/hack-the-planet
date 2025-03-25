@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Zugriffspunkt: FINALER DECRYPTIONSCODE</title>
+    <style>
+        body {
+            background-color: #0c0f1a;
+            color: #7fffd4;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+        .container {
+            border: 2px solid #00ffff;
+            border-radius: 10px;
+            padding: 40px;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            background-color: #10162a;
+            box-shadow: 0 0 15px #00ffff;
+        }
+        input {
+            font-size: 20px;
+            padding: 10px;
+            width: 60%;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #00ffff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        .shield-icon {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="imgs/Team_Symbole_4er_Set.png" alt="!" class="shield-icon">
+        <h1>Zugriffspunkt: FINALER DECRYPTIONSCODE</h1>
+        <p>Letzter Protokollbefehl aktiv. Gib den finalen Code zur Öffnung der Master-Einheit ein.</p>
+        <input type="text" id="codeInput" placeholder="Code eingeben">
+        <br>
+        <button onclick="verifyCode()">Zugriff prüfen</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="scripts/decryption_final.js"></script>
+</body>
+</html>
