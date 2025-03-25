@@ -9,7 +9,9 @@
             background-color: #000b12;
             color: #cccccc;
             font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5em;
             padding: 40px;
+            text-align: center;
         }
         .terminal {
             border: 3px solid #cccccc;
@@ -19,6 +21,7 @@
             max-width: 760px;
             margin: auto;
             text-align: center;
+            box-shadow: 0px 0px 15px rgba(51, 204, 255, 0.5);
         }
         h1 {
             color: #cccccc;
@@ -26,16 +29,24 @@
             border-bottom: 1px solid #cccccc;
             padding-bottom: 10px;
         }
+
         .input-section {
-            margin-top: 30px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Adds space between input and button */
+            flex-wrap: wrap; /* Allows wrapping on small screens */
         }
+        
         input {
             background-color: #000;
             color: #cccccc;
             border: 2px solid #cccccc;
-            padding: 10px;
-            font-size: 1.2em;
-            width: 250px;
+            padding: 12px;
+            font-size: 1em;
+            width: 250px; /* Fixed width for larger screens */
+            flex: 1; /* Allows resizing if needed */
         }
         button {
             background-color: #cccccc;
@@ -43,8 +54,13 @@
             border: none;
             padding: 10px 20px;
             font-size: 1em;
-            margin-left: 10px;
+            margin-top: 10px;
             cursor: pointer;
+            width: 100%;
+            max-width: 200px;
+        }
+        button:hover {
+            background-color: #00aaff;
         }
         .hidden {
             display: none;
@@ -58,6 +74,17 @@
         .icon {
             width: 100px;
             margin-bottom: 20px;
+        }
+
+        /* 📱 Mobile Optimization */
+        @media (max-width: 500px) {
+            .input-section {
+                flex-direction: column; /* Stacks input and button */
+            }
+
+            input, button {
+                width: 100%; /* Full width on small screens */
+            }
         }
     </style>
 </head>
